@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XLFilterListView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="GuP-D3-e5i">
+                    <rect key="frame" x="0.0" y="15" width="375" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="xPh-RC-AWQ"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dIs-54-bVZ">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lb9-2W-Yew">
+                    <rect key="frame" x="0.0" y="15" width="375" height="80"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="GuP-D3-e5i" secondAttribute="bottom" id="31x-Th-SbH"/>
+                <constraint firstItem="GuP-D3-e5i" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ipl-kB-ahe"/>
+                <constraint firstAttribute="trailing" secondItem="GuP-D3-e5i" secondAttribute="trailing" id="MQ6-sO-RkJ"/>
+                <constraint firstItem="Lb9-2W-Yew" firstAttribute="trailing" secondItem="GuP-D3-e5i" secondAttribute="trailing" id="Y0S-eT-eRo"/>
+                <constraint firstItem="Lb9-2W-Yew" firstAttribute="bottom" secondItem="GuP-D3-e5i" secondAttribute="bottom" id="hRM-86-2xv"/>
+                <constraint firstItem="GuP-D3-e5i" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="mos-tf-zSA"/>
+                <constraint firstItem="Lb9-2W-Yew" firstAttribute="leading" secondItem="GuP-D3-e5i" secondAttribute="leading" id="s09-OL-jVb"/>
+                <constraint firstItem="Lb9-2W-Yew" firstAttribute="top" secondItem="GuP-D3-e5i" secondAttribute="top" id="u8i-g5-YDb"/>
+                <constraint firstItem="GuP-D3-e5i" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xwE-ZC-wjg"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="31x-Th-SbH"/>
+                    <exclude reference="Ipl-kB-ahe"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="filterListCollectionView" destination="GuP-D3-e5i" id="LXl-Q8-mpW"/>
+                <outlet property="scrollView" destination="Lb9-2W-Yew" id="qLM-Qp-5s1"/>
+            </connections>
+            <point key="canvasLocation" x="328.5" y="97"/>
+        </view>
+    </objects>
+</document>
